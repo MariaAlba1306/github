@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
+import { Input, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './public/features/pages/welcome/welcome.component';
@@ -9,6 +8,7 @@ import { ListComponent } from './public/features/components/repository/list/list
 import { ProfileComponent } from './public/features/components/repository/profile/profile.component';
 import { CardComponent } from './public/shared/card/card.component';
 import { StatusComponent } from './public/shared/status/status.component';
+import { HeaderComponent } from './public/features/components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,9 @@ import { StatusComponent } from './public/shared/status/status.component';
     ProfileComponent,
     CardComponent,
     StatusComponent,
+    HeaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

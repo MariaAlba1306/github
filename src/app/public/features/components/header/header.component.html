@@ -21,8 +21,13 @@
           inputId="search"
           label="Firstname"
           [control]="$any(formGroup.controls.inputvalue)"
+          (keydown)="keyDownFunction($event)"
+          id="inputValue"
         ></app-input>
+
+        <app-button (click)="search()" id="searchInput"> </app-button>
       </div>
+      
     </div>
   </div>
 </nav>

@@ -19,3 +19,7 @@
     transform: rotateY(360deg);
   }
 }
+.invalid {
+  border: 1px solid red;
+}
+

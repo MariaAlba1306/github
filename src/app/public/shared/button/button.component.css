@@ -3,19 +3,19 @@
 }
 
 .btn {
-  margin: 5px !important;
+  margin: 5px;
   height: 45px;
   width: 100px;
   text-align: center;
   cursor: pointer;
 }
 
-.btn-three {
+.btn-main {
   color: #fff;
   transition: all 0.5s;
   position: relative;
 }
-.btn-three::before {
+.btn-main::before {
   content: "";
   position: absolute;
   top: 0;
@@ -26,11 +26,11 @@
   background-color: rgba(241, 235, 235, 0.258);
   transition: all 0.3s;
 }
-.btn-three:hover::before {
+.btn-main:hover::before {
   opacity: 0;
   transform: scale(0.5, 0.5);
 }
-.btn-three::after {
+.btn-main::after {
   content: "";
   position: absolute;
   top: 0;

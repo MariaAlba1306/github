@@ -19,7 +19,7 @@ export class HeaderComponent {
     });
   }
 
-  keyDownFunction(event: { keyCode: number }) {
+  keyDownFunction(event: { keyCode: number }): void {
     if (event.keyCode === 13) {
       this.search();
     } else {

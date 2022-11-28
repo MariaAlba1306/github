@@ -12,7 +12,7 @@ export class InputComponent {
       inputvalue: new FormControl(),
     });
   }
-  formGroup: any;
+  formGroup: FormGroup;
   @Input() inputId = '';
   @Input() control = new FormControl();
   @Input() label = '';

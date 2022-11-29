@@ -1,1 +1,32 @@
-<p>header works</p>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container col-md-3">
+    <a class="navbar-brand" href="#"
+      ><body>
+        <div class="waviy">
+          <span style="--i: 1">G</span>
+          <span style="--i: 2">I</span>
+          <span style="--i: 3">T</span>
+          <span style="--i: 4">H</span>
+          <span style="--i: 5">U</span>
+          <span style="--i: 6">B</span>
+          <span style="--i: 7">.</span>
+        </div>
+      </body>
+    </a>
+  </div>
+  <div class="container col-md-9">
+    <div class="navbar-collapse">
+      <div class="form-inline my-2 my-lg-20">
+        <app-input
+          inputId="search"
+          label="Firstname"
+          [control]="$any(formGroup.controls.inputvalue)"
+          (keydown)="keyDownFunction($event)"
+          id="inputValue"
+        ></app-input>
+
+        <app-button (click)="search()" id="searchInput"> </app-button>
+      </div>
+    </div>
+  </div>
+</nav>

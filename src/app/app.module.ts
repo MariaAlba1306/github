@@ -9,6 +9,9 @@ import { ProfileComponent } from './public/features/components/repository/profil
 import { CardComponent } from './public/shared/card/card.component';
 import { StatusComponent } from './public/shared/status/status.component';
 import { HeaderComponent } from './public/features/components/header/header.component';
+import { InputComponent } from './public/shared/input/input.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonComponent } from './public/shared/button/button.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +23,16 @@ import { HeaderComponent } from './public/features/components/header/header.comp
     CardComponent,
     StatusComponent,
     HeaderComponent,
+    InputComponent,
+    ButtonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

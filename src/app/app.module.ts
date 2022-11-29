@@ -11,6 +11,7 @@ import { StatusComponent } from './public/shared/status/status.component';
 import { HeaderComponent } from './public/features/components/header/header.component';
 import { InputComponent } from './public/shared/input/input.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonComponent } from './public/shared/button/button.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StatusComponent,
     HeaderComponent,
     InputComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,

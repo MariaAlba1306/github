@@ -1,0 +1,40 @@
+* {
+  font-weight: 800;
+  text-align: center;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.button {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.list-group-item {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.titles {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
+}
+
+.result {
+  font-weight: 400;
+  text-transform: none;
+}

@@ -1,1 +1,48 @@
-<p>profile works!</p>
+<div class="card" style="">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <span class="titles">{{ name }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="p-1">
+          <img src="{{ image }}" class="card-img" alt="..." />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="p-1">
+          <ul class="list-group">
+            <li class="list-group-item">
+              Username: <span class="result">{{ userName }}</span>
+            </li>
+            <li class="list-group-item">
+              Location: <span class="result">{{ location }}</span>
+            </li>
+            <li class="list-group-item">
+              Email: <span class="result">{{ email }}</span>
+            </li>
+            <li class="list-group-item">
+              Blog Link: <span class="result">{{ blogLink }}</span>
+            </li>
+            <li class="list-group-item">
+              Member since: <span class="result">{{ year }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="button">
+          <app-button></app-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

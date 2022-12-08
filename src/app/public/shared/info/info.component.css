@@ -1,0 +1,62 @@
+.cards {
+  position: absolute;
+  width: 98%;
+  margin: 0 auto;
+  padding-left: 0px;
+}
+.item-1 {
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  font-weight: 400;
+  padding: 0;
+  width: 25%;
+}
+.item-2 {
+  background-color: blue;
+  color: white;
+  font-size: 10px;
+  font-weight: 400;
+  width: 25%;
+}
+.item-3 {
+  background-color: green;
+  color: white;
+  font-size: 10px;
+  font-weight: 400;
+  width: 25%;
+}
+.item-4 {
+  background-color: yellow;
+  font-size: 10px;
+  font-weight: 400;
+  width: 25%;
+}
+.column {
+  border: 1px solid black;
+}
+.column {
+  float: left;
+  width: 25%;
+}
+
+.summary {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1165px) {
+  .column {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .column {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 470px) {
+  .column {
+    width: 50%;
+  }
+}

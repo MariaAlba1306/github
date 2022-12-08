@@ -38,3 +38,7 @@
   font-weight: 400;
   text-transform: none;
 }
+.summary {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}

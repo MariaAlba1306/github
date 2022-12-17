@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./info.component.css'],
 })
 export class InfoComponent {
-  repos: number = 0;
-  gists: number = 0;
-  followers: number = 3240;
-  following: number = 210;
+  mockRepostoriesInfo = {
+    public_repos: 0,
+    public_gists: 0,
+    followers: 0,
+    following: 0,
+  };
 }

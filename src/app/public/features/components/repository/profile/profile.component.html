@@ -2,7 +2,7 @@
   <div class="container profileCard__container">
     <div class="row">
       <div class="col">
-        <span class="profileCard__title">{{ name }}</span>
+        <span class="profileCard__title">{{ mockRepostoriesInfo.login }}</span>
       </div>
     </div>
   </div>
@@ -10,7 +10,11 @@
     <div class="row">
       <div class="col">
         <div class="p-1">
-          <img src="{{ image }}" class="card-img" alt="..." />
+          <img
+            src="{{ mockRepostoriesInfo.avatar_url }}"
+            class="card-img"
+            alt="..."
+          />
         </div>
       </div>
     </div>
@@ -20,22 +24,33 @@
           <ul class="list-group profileCard__details">
             <li class="list-group-item profileCard__item">
               Username:
-              <span class="profileCard__item--result">{{ userName }}</span>
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.login
+              }}</span>
             </li>
             <li class="list-group-item profileCard__item">
               Location:
-              <span class="profileCard__item--result">{{ location }}</span>
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.location
+              }}</span>
             </li>
             <li class="list-group-item profileCard__item">
-              Email: <span class="profileCard__item--result">{{ email }}</span>
+              Email:
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.email
+              }}</span>
             </li>
             <li class="list-group-item profileCard__item">
               Blog Link:
-              <span class="profileCard__item--result">{{ blogLink }}</span>
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.blog
+              }}</span>
             </li>
             <li class="list-group-item profileCard__item">
               Member since:
-              <span class="profileCard__item--result">{{ year }}</span>
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.created_at
+              }}</span>
             </li>
           </ul>
         </div>

@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./info.component.css'],
 })
 export class InfoComponent {
-  repos: number = 110;
-  gists: number = 40;
+  repos: number = 0;
+  gists: number = 0;
   followers: number = 3240;
   following: number = 210;
 }

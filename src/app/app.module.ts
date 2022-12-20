@@ -12,6 +12,7 @@ import { HeaderComponent } from './public/features/components/header/header.comp
 import { InputComponent } from './public/shared/input/input.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './public/shared/button/button.component';
+import { InfoComponent } from './public/shared/info/info.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ButtonComponent } from './public/shared/button/button.component';
     HeaderComponent,
     InputComponent,
     ButtonComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,

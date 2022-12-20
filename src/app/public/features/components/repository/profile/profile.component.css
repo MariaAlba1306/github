@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-.card {
+.profileCard {
   margin: 0 auto;
   padding: 10px;
   margin-top: 15px;
@@ -12,12 +12,12 @@
   background-color: black;
 }
 
-.button {
+.profileCard__button {
   max-width: 150px;
   margin: 0 auto;
 }
 
-.list-group-item {
+.profileCard__item {
   background-color: black;
   color: white;
   text-transform: uppercase;
@@ -26,7 +26,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.titles {
+.profileCard__title {
   text-transform: uppercase;
   color: white;
   font-weight: 800;
@@ -34,11 +34,31 @@
   text-align: center;
 }
 
-.result {
+.profileCard__item--result {
   font-weight: 400;
   text-transform: none;
 }
-.summary {
+.profileCard__summary {
   padding-top: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
+}
+/* Responsive layout*/
+@media screen and (max-width: 1165px) {
+  .column {
+    width: 50%;
+  }
+  .profileCard__summary {
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .column {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 470px) {
+  .column {
+    width: 50%;
+    padding-bottom: 30px;
+  }
 }

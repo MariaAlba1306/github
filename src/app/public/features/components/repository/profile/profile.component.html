@@ -1,37 +1,56 @@
-<div class="card" style="">
-  <div class="container">
+<div class="card profileCard">
+  <div class="container profileCard__container">
     <div class="row">
       <div class="col">
-        <span class="titles">{{ name }}</span>
+        <span class="profileCard__title">{{ mockRepostoriesInfo.login }}</span>
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container profileCard__container">
     <div class="row">
       <div class="col">
         <div class="p-1">
-          <img src="{{ image }}" class="card-img" alt="..." />
+          <img
+            src="{{ mockRepostoriesInfo.avatar_url }}"
+            class="card-img"
+            alt="..."
+          />
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col">
         <div class="p-1">
-          <ul class="list-group">
-            <li class="list-group-item">
-              Username: <span class="result">{{ userName }}</span>
+          <ul class="list-group profileCard__details">
+            <li class="list-group-item profileCard__item">
+              Username:
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.login
+              }}</span>
             </li>
-            <li class="list-group-item">
-              Location: <span class="result">{{ location }}</span>
+            <li class="list-group-item profileCard__item">
+              Location:
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.location
+              }}</span>
             </li>
-            <li class="list-group-item">
-              Email: <span class="result">{{ email }}</span>
+            <li class="list-group-item profileCard__item">
+              Email:
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.email
+              }}</span>
             </li>
-            <li class="list-group-item">
-              Blog Link: <span class="result">{{ blogLink }}</span>
+            <li class="list-group-item profileCard__item">
+              Blog Link:
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.blog
+              }}</span>
             </li>
-            <li class="list-group-item">
-              Member since: <span class="result">{{ year }}</span>
+            <li class="list-group-item profileCard__item">
+              Member since:
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.created_at
+              }}</span>
             </li>
           </ul>
         </div>
@@ -39,12 +58,12 @@
     </div>
     <div class="row">
       <div class="col">
-        <div class="button">
+        <div class="button profileCard__button">
           <app-button></app-button>
         </div>
       </div>
     </div>
-    <div class="row summary">
+    <div class="row profileCard__summary">
       <app-info></app-info>
     </div>
   </div>

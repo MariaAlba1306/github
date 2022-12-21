@@ -1,0 +1,20 @@
+.repositoryCard {
+  width: 53vw;
+  margin: 0 auto !important;
+  padding: 0px;
+}
+
+/* Responsive layout*/
+
+@media screen and (max-width: 767px) {
+  .repositoryCard {
+    margin: 0 auto !important;
+    padding: 0px;
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 470px) {
+  .column {
+    width: 50%;
+  }
+}

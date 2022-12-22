@@ -3,4 +3,9 @@
   margin-top: 10px;
   vertical-align: top;
   min-height: 350px;
+  display: inline-block;
+  vertical-align: top;
+}
+.navbar {
+  align-items: flex-start;
 }

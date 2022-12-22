@@ -1,0 +1,17 @@
+.tableRepository__description {
+  width: 300vw;
+  padding: 10px 10px 0px 10px;
+}
+.tableRepository__description--name {
+font-weight: 600;
+}
+.tableRepository__info {
+  width: 100vw;
+}
+table {
+  padding: 0px;
+  color: white;
+}
+p {
+  margin: 0px;
+}

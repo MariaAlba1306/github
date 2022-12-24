@@ -9,7 +9,8 @@ export class CardComponent {
   mockRepostoriesInfo = {
     name: 'name',
     html_url: '',
-    description: 'description',
+    description:
+      'description',
     forks: '',
     watchers: '',
   };

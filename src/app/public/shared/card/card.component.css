@@ -22,7 +22,8 @@ td {
   text-align: center;
 }
 
-@media screen and (min-width: 668px) {
+
+@media screen and (min-width: 1000px) {
   .tableRepository__status {
     display: grid;
     grid-template-columns: auto auto;

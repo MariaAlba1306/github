@@ -12,8 +12,16 @@
   <td class="tableRepository__info">
     <tr>
       <div class="tableRepository__status">
-        <div class="cell"><app-status></app-status></div>
-        <div class="cell"><app-status></app-status></div>
+        <div class="cell">
+          <app-status
+            [title]="mockRepostoriesInfo.forks + ' forks'"
+version='forks'          ></app-status>
+        </div>
+        <div class="cell">
+          <app-status
+            [title]="mockRepostoriesInfo.watchers + ' watchers'" version='watchers'    
+          ></app-status>
+        </div>
       </div>
     </tr>
   </td>

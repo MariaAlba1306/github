@@ -1,19 +1,15 @@
 .tableRepository__description {
   width: 300vw;
   padding: 10px 10px 0px 10px;
-}
-.tableRepository__description--name {
-  font-weight: 600;
-}
-
-table {
-  padding: 0px;
-  color: white;
-}
-p {
   margin: 0px;
 }
-td {
+.tableRepository__name {
+  font-weight: 600;
+  margin: 0px;
+}
+.tableRepository {
+  padding: 0px;
+  color: white;
   border-top: 0px;
 }
 .tableRepository__status {
@@ -21,8 +17,6 @@ td {
   margin: 0px auto;
   text-align: center;
 }
-
-
 @media screen and (min-width: 1000px) {
   .tableRepository__status {
     display: grid;

@@ -7,33 +7,19 @@
   vertical-align: middle;
   margin: 10px;
 }
+.statusCard--forks {
+  background-color: rgb(155, 255, 255);
+
+}
+.statusCard--watchers {
+  background-color: rgb(151, 151, 233);
+}
 
 .statusCard__text {
   padding: 0;
   margin: 0 !important;
 }
-.statusCard--forks {
-  background-color: rgb(155, 255, 255);
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 100px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  font-size: 12px;
-  vertical-align: middle;
-  margin: 10px;
-}
-.statusCard--watchers {
-  background-color: rgb(151, 151, 233);
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 100px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  font-size: 12px;
-  vertical-align: middle;
-  margin: 10px;
-}
+
 
 @media screen and (max-width: 667px) {
   .statusCard {

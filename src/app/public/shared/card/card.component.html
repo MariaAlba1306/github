@@ -1,1 +1,28 @@
-<p>card works!</p>
+<tr>
+  <td class="tableRepository__description">
+    <tr>
+      <p class="tableRepository__name">
+        {{ mockRepostoriesInfo.name }}
+      </p>
+    </tr>
+    <tr>
+      <p  class="tableRepository__info">{{ mockRepostoriesInfo.description }}</p>
+    </tr>
+  </td>
+  <td class="tableRepository__info">
+    <tr>
+      <div class="tableRepository__status">
+        <div class="tableRepository__cell">
+          <app-status
+            [title]="mockRepostoriesInfo.forks + ' forks'"
+version='forks'          ></app-status>
+        </div>
+        <div class="tableRepository__cell">
+          <app-status
+            [title]="mockRepostoriesInfo.watchers + ' watchers'" version='watchers'    
+          ></app-status>
+        </div>
+      </div>
+    </tr>
+  </td>
+</tr>

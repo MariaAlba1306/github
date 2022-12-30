@@ -3,4 +3,9 @@
   margin-top: 10px;
   vertical-align: top;
   min-height: 350px;
+  display: inline-block;
+  vertical-align: top;
+}
+.results {
+  align-items: flex-start;
 }

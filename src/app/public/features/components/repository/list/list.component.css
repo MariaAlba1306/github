@@ -1,0 +1,23 @@
+.repositoryCard {
+  width: 53vw;
+  padding: 0px;
+  margin-top: 15px;
+}
+.repositoryCard__title {
+  background-color: black;
+  color: white;
+  border-radius: 20px 20px 0px 0px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* Responsive layout*/
+
+@media screen and (max-width: 767px) {
+  .repositoryCard {
+    margin: 0 auto;
+    padding: 0px;
+    width: 70vw;
+  }
+}

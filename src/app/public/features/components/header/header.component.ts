@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ActivatedRoute, Route } from '@angular/router';
+import { GithubService } from 'src/app/api/github.service';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,7 @@ export class HeaderComponent {
   inputValue: string | undefined;
   inputValuewithoutCommas: string = '';
   formGroup: any;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute,public GithubService: GithubService ) {
     this.formGroup = new FormGroup({
       inputvalue: new FormControl(),
     });
@@ -33,6 +34,8 @@ export class HeaderComponent {
       this.router.navigate(['results'], {
         queryParams: { search: this.inputValue },
       });
+      this.GithubService.searchProfile(this.inputValue);
+
     } else {
       document.getElementById('search')!.style.border = '2px solid red';
     }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { GithubService } from 'src/app/api/github.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-info',
@@ -6,10 +8,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./info.component.css'],
 })
 export class InfoComponent {
-  mockRepostoriesInfo = {
-    public_repos: 0,
-    public_gists: 0,
-    followers: 0,
-    following: 0,
-  };
+
+  constructor(
+    public GithubService: GithubService,
+    private activatedRoute: ActivatedRoute
+  ) {
+    this.activatedRoute.queryParams.subscribe((data) => {
+      this.querySearch = data['search'];
+    });
+  }
+  querySearch: any;
+  get mockRepostoriesInfo(): any {
+    return this.GithubService.searchProfileResults;
+  }
+  ngOnInit(): void {
+    this.GithubService.searchProfile(this.querySearch);
+  }
 }
+
+

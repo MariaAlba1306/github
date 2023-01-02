@@ -13,6 +13,7 @@ import { InputComponent } from './public/shared/input/input.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './public/shared/button/button.component';
 import { InfoComponent } from './public/shared/info/info.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { InfoComponent } from './public/shared/info/info.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

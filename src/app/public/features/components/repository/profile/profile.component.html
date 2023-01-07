@@ -1,4 +1,4 @@
-<div class="card profileCard">
+<div *ngIf="results == false" class="card profileCard">
   <div class="container profileCard__container">
     <div class="row">
       <div class="col">
@@ -22,29 +22,46 @@
       <div class="col">
         <div class="p-1">
           <ul class="list-group profileCard__details">
-            <li class="list-group-item profileCard__item">
+            <li
+              *ngIf="mockRepostoriesInfo.login"
+              class="list-group-item profileCard__item"
+            >
               Username:
-              <span class="profileCard__item--result">{{ mockRepostoriesInfo.login }}</span>
+              <span class="profileCard__item--result">{{
+                mockRepostoriesInfo.login
+              }}</span>
             </li>
-            <li class="list-group-item profileCard__item">
+            <li
+              *ngIf="mockRepostoriesInfo.location"
+              class="list-group-item profileCard__item"
+            >
               Location:
               <span class="profileCard__item--result">{{
                 mockRepostoriesInfo.location
               }}</span>
             </li>
-            <li class="list-group-item profileCard__item">
+            <li
+              *ngIf="mockRepostoriesInfo.email"
+              class="list-group-item profileCard__item"
+            >
               Email:
               <span class="profileCard__item--result">{{
                 mockRepostoriesInfo.email
               }}</span>
             </li>
-            <li class="list-group-item profileCard__item">
+            <li
+              *ngIf="mockRepostoriesInfo.blog"
+              class="list-group-item profileCard__item"
+            >
               Blog Link:
               <span class="profileCard__item--result">{{
                 mockRepostoriesInfo.blog
               }}</span>
             </li>
-            <li class="list-group-item profileCard__item">
+            <li
+              *ngIf="mockRepostoriesInfo.created_at"
+              class="list-group-item profileCard__item"
+            >
               Member since:
               <span class="profileCard__item--result">{{
                 mockRepostoriesInfo.created_at

@@ -1,12 +1,16 @@
-<tr>
+
+<tr  *ngFor="let item of mockRepostoriesRepo; let i = index">
   <td class="tableRepository__description">
     <tr>
+      <a href="{{ mockRepostoriesRepo[i].html_url
+ }}">
       <p class="tableRepository__name">
-        {{ mockRepostoriesInfo.name }}
+        {{ mockRepostoriesRepo[i].name }}
       </p>
+      </a>
     </tr>
     <tr>
-      <p  class="tableRepository__info">{{ mockRepostoriesInfo.description }}</p>
+      <p  class="tableRepository__info">{{ mockRepostoriesRepo[i].description }}</p>
     </tr>
   </td>
   <td class="tableRepository__info">
@@ -14,12 +18,12 @@
       <div class="tableRepository__status">
         <div class="tableRepository__cell">
           <app-status
-            [title]="mockRepostoriesInfo.forks + ' forks'"
+            [title]="mockRepostoriesRepo[i].forks + ' forks'"
 version='forks'          ></app-status>
         </div>
         <div class="tableRepository__cell">
           <app-status
-            [title]="mockRepostoriesInfo.watchers + ' watchers'" version='watchers'    
+            [title]="mockRepostoriesRepo[i].watchers + ' watchers'" version='watchers'    
           ></app-status>
         </div>
       </div>

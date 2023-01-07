@@ -17,7 +17,7 @@ export class InfoComponent {
       this.querySearch = data['search'];
     });
   }
-  querySearch: any;
+  querySearch: string = '';
   get mockRepostoriesInfo(): any {
     return this.GithubService.searchProfileResults;
   }

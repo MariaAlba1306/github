@@ -8,7 +8,7 @@ import { GithubService } from 'src/app/api/github.service';
 })
 export class ListComponent {
   constructor(public GithubService: GithubService){};
-  get results(): any {
+  get results(): boolean {
     return this.GithubService.noResults 
   }
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { GithubService } from 'src/app/api/github.service';
 import { ActivatedRoute } from '@angular/router';
 
-
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -17,15 +16,15 @@ export class ProfileComponent implements OnInit {
       this.querySearch = data['search'];
     });
   }
-  querySearch: any;
+  querySearch: string = '';
 
-  get results(): any {
+  get results():boolean {
     return this.GithubService.noResults;
   }
   get mockRepostoriesInfo(): any {
     return this.GithubService.searchProfileResults;
   }
-  goToUrl(): any {
+  goToUrl(): void {
     window.location.href =
       'https://github.com/' + this.mockRepostoriesInfo.login;
   }

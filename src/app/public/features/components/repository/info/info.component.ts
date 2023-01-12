@@ -1,15 +1,14 @@
-
-
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { GithubService } from 'src/app/api/github.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
+  selector: 'app-info',
+  templateUrl: './info.component.html',
+  styleUrls: ['./info.component.css'],
 })
-export class CardComponent  {
+export class InfoComponent {
+
   constructor(
     public GithubService: GithubService,
     private activatedRoute: ActivatedRoute
@@ -19,10 +18,12 @@ export class CardComponent  {
     });
   }
   querySearch: string = '';
- 
-
-  get mockRepostoriesRepo(): any {
-    return this.GithubService.mapper;
+  get mockRepostoriesInfo(): any {
+    return this.GithubService.searchProfile;
   }
-
+  ngOnInit(): void {
+    this.GithubService.searchProfile(this.querySearch);
+  }
 }
+
+

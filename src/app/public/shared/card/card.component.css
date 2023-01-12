@@ -1,0 +1,26 @@
+.tableRepository__description {
+  width: 300vw;
+  padding: 10px 10px 0px 10px;
+  margin: 0px;
+}
+.tableRepository__name {
+  font-weight: 600;
+  margin: 0px;
+}
+.tableRepository {
+  padding: 0px;
+  color: white;
+  border-top: 0px;
+}
+.tableRepository__status {
+  grid-gap: 1px;
+  margin: 0px auto;
+  text-align: center;
+}
+@media screen and (min-width: 1189px) {
+  .tableRepository__status {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+  }
+}

@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
 })
-export class CardComponent implements OnInit {
+export class CardComponent  {
   constructor(
     public GithubService: GithubService,
     private activatedRoute: ActivatedRoute
@@ -18,23 +18,11 @@ export class CardComponent implements OnInit {
       this.querySearch = data['search'];
     });
   }
-  querySearch: any;
-  // mockRepostoriesInfo = {
-  //   login: '',
-  //   location: '',
-  //   email: '',
-  //   blog: '',
-  //   created_at: '',
-  //   avatar_url:
-  //     'https://www.saramusico.com/wp-content/uploads/2019/04/foto-de-perfil-en-linkedin.jpg',
-  //   html_url: '',
-  // };
+  querySearch: string = '';
+ 
 
   get mockRepostoriesRepo(): any {
-    return this.GithubService.searchRepoResults;
+    return this.GithubService.mapper;
   }
 
-  ngOnInit(): void {
-
-  }
 }

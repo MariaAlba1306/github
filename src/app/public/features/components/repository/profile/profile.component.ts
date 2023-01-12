@@ -1,7 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { GithubService } from 'src/app/api/github.service';
 import { ActivatedRoute } from '@angular/router';
+import { stringify } from 'querystring';
+import { SearchProfile, SearchProfileDTO } from 'src/app/api/github.interface';
+import { userInfo } from 'os';
+import { Observable } from 'rxjs';
 
+
+@Injectable()
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -17,19 +23,28 @@ export class ProfileComponent implements OnInit {
     });
   }
   querySearch: string = '';
+  mockRepostoriesInfo: SearchProfile = {
+  login: '',
+  location: '',
+  email: '',
+  avatar_url: '',
+  blog: '',
+  created_at: ''
+  };
 
-  get results():boolean {
+  get results(): boolean {
     return this.GithubService.noResults;
   }
-  get mockRepostoriesInfo(): any {
-    return this.GithubService.searchProfileResults;
-  }
+  ejemplo = '';
   goToUrl(): void {
     window.location.href =
       'https://github.com/' + this.mockRepostoriesInfo.login;
+    console.log(typeof this.mockRepostoriesInfo);
   }
 
   ngOnInit(): void {
-    this.GithubService.searchProfile(this.querySearch);
+   this.GithubService.searchProfile(this.querySearch).then((data) => {
+      this.mockRepostoriesInfo = data;
+    });
   }
 }

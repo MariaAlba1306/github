@@ -13,7 +13,7 @@ export class HeaderComponent {
   @Input() searchbox: string = '';
   inputValue: string | undefined;
   inputValuewithoutCommas: string = '';
-  formGroup: any;
+  formGroup: FormGroup;
   constructor(private router: Router, private activatedRoute: ActivatedRoute,public GithubService: GithubService ) {
     this.formGroup = new FormGroup({
       inputvalue: new FormControl(),

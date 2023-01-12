@@ -19,7 +19,7 @@ export class InfoComponent {
   }
   querySearch: string = '';
   get mockRepostoriesInfo(): any {
-    return this.GithubService.searchProfileResults;
+    return this.GithubService.searchProfile;
   }
   ngOnInit(): void {
     this.GithubService.searchProfile(this.querySearch);

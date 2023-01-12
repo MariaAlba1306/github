@@ -1,7 +1,7 @@
 .repositoryCard {
-  width: 53vw;
+  /* width: 53vw;
   padding: 0px;
-  margin-top: 15px;
+  margin-top: 15px; */
 }
 .repositoryCard__title {
   background-color: black;
@@ -16,8 +16,8 @@
 
 @media screen and (max-width: 767px) {
   .repositoryCard {
-    margin: 0 auto;
+    /* margin: 0 auto;
     padding: 0px;
-    width: 70vw;
+    width: 70vw; */
   }
 }

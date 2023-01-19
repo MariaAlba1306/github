@@ -11,10 +11,13 @@ import { GithubService } from 'src/app/api/github.service';
 })
 export class HeaderComponent {
   @Input() searchbox: string = '';
-  inputValue: string | undefined;
+  inputValue: string = '';
   inputValuewithoutCommas: string = '';
   formGroup: FormGroup;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute,public GithubService: GithubService ) {
+  constructor(
+    private router: Router,
+    private GithubService: GithubService
+  ) {
     this.formGroup = new FormGroup({
       inputvalue: new FormControl(),
     });
@@ -27,6 +30,9 @@ export class HeaderComponent {
       document.getElementById('search')!.style.border = '0px solid red';
     }
   }
+  get results(): boolean {
+    return this.GithubService.noResults;
+  }
   search(): void {
     this.inputValue = this.formGroup.value.inputvalue;
     if (!!this.inputValue) {
@@ -34,8 +40,9 @@ export class HeaderComponent {
       this.router.navigate(['results'], {
         queryParams: { search: this.inputValue },
       });
-      this.GithubService.searchProfile(this.inputValue);
-
+      setTimeout(() => {
+        document.location.reload();
+      }, 10);
     } else {
       document.getElementById('search')!.style.border = '2px solid red';
     }

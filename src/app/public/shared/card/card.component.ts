@@ -1,17 +1,16 @@
-
-
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from 'src/app/api/github.service';
 import { ActivatedRoute } from '@angular/router';
+import { SearchRepo } from 'src/app/api/github.interface';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
 })
-export class CardComponent  {
+export class CardComponent implements OnInit {
   constructor(
-    public GithubService: GithubService,
+    private GithubService: GithubService,
     private activatedRoute: ActivatedRoute
   ) {
     this.activatedRoute.queryParams.subscribe((data) => {
@@ -19,10 +18,19 @@ export class CardComponent  {
     });
   }
   querySearch: string = '';
- 
+  mockRepositoriesRepo: SearchRepo[] = [
+    {
+      name: '',
+      description: '',
+      forks: 0,
+      watchers: 0,
+      html_url: '',
+    },
+  ];
 
-  get mockRepostoriesRepo(): any {
-    return this.GithubService.mapper;
+  ngOnInit(): void {
+    this.GithubService.searchRepo(this.querySearch).then((data) => {
+      this.mockRepositoriesRepo = data;
+    });
   }
-
 }

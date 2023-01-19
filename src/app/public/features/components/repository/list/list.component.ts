@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { GithubService } from 'src/app/api/github.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +6,6 @@ import { GithubService } from 'src/app/api/github.service';
   styleUrls: ['./list.component.css'],
 })
 export class ListComponent {
-  constructor(public GithubService: GithubService){};
-  get results(): boolean {
-    return this.GithubService.noResults 
-  }
+ 
 }
 

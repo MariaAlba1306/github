@@ -1,10 +1,7 @@
 import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { GithubService } from 'src/app/api/github.service';
 import { ActivatedRoute } from '@angular/router';
-import { stringify } from 'querystring';
 import { SearchProfile, SearchProfileDTO } from 'src/app/api/github.interface';
-import { userInfo } from 'os';
-import { Observable } from 'rxjs';
 
 
 @Injectable()
@@ -15,7 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class ProfileComponent implements OnInit {
   constructor(
-    public GithubService: GithubService,
+    private GithubService: GithubService,
     private activatedRoute: ActivatedRoute
   ) {
     this.activatedRoute.queryParams.subscribe((data) => {
@@ -23,28 +20,28 @@ export class ProfileComponent implements OnInit {
     });
   }
   querySearch: string = '';
-  mockRepostoriesInfo: SearchProfile = {
-  login: '',
-  location: '',
-  email: '',
-  avatar_url: '',
-  blog: '',
-  created_at: ''
+  mockRepositoriesInfo: SearchProfile = {
+    login: '',
+    location: '',
+    email: '',
+    avatar_url: '',
+    blog: '',
+    created_at: '',
+    followers: 0,
+    following: 0,
+    public_gists: 0,
+    public_repos: 0,
   };
 
-  get results(): boolean {
-    return this.GithubService.noResults;
-  }
-  ejemplo = '';
+ 
   goToUrl(): void {
     window.location.href =
-      'https://github.com/' + this.mockRepostoriesInfo.login;
-    console.log(typeof this.mockRepostoriesInfo);
+      'https://github.com/' + this.mockRepositoriesInfo.login;
   }
 
   ngOnInit(): void {
-   this.GithubService.searchProfile(this.querySearch).then((data) => {
-      this.mockRepostoriesInfo = data;
+    this.GithubService.searchProfile(this.querySearch).then((data) => {
+      this.mockRepositoriesInfo = data;
     });
   }
 }

@@ -1,9 +1,12 @@
 <app-header></app-header>
-<nav class="results navbar navbar-light">
+<nav *ngIf="!noResults" class="results navbar navbar-light">
   <div class="container col-md-4">
     <app-profile></app-profile>
   </div>
   <div class="container col-md-7">
     <app-list></app-list>
   </div>
+</nav>
+<nav class="results navbar navbar-light">
+  <div *ngIf="noResults"class="container__empty col-md-12">No hay resultados. Realiza otra búsqueda por favor.</div>
 </nav>

@@ -1,8 +1,8 @@
-<div *ngIf="!results" class="card profileCard">
+<div  class="card profileCard">
   <div class="container profileCard__container">
     <div class="row">
       <div class="col">
-        <span class="profileCard__title">{{ mockRepostoriesInfo.login }}</span>
+        <span class="profileCard__title">{{ mockRepositoriesInfo.login }}</span>
       </div>
     </div>
   </div>
@@ -11,7 +11,7 @@
       <div class="col">
         <div class="p-1">
           <img
-            src="{{ mockRepostoriesInfo.avatar_url }}"
+            src="{{ mockRepositoriesInfo.avatar_url }}"
             class="card-img"
             alt="..."
           />
@@ -23,48 +23,48 @@
         <div class="p-1">
           <ul class="list-group profileCard__details">
             <li
-              *ngIf="mockRepostoriesInfo.login"
+              *ngIf="mockRepositoriesInfo.login"
               class="list-group-item profileCard__item"
             >
               Username:
               <span class="profileCard__item--result">{{
-                mockRepostoriesInfo.login
+                mockRepositoriesInfo.login
               }}</span>
             </li>
             <li
-              *ngIf="mockRepostoriesInfo.location"
+              *ngIf="mockRepositoriesInfo.location"
               class="list-group-item profileCard__item"
             >
               Location:
               <span class="profileCard__item--result">{{
-                mockRepostoriesInfo.location
+                mockRepositoriesInfo.location
               }}</span>
             </li>
             <li
-              *ngIf="mockRepostoriesInfo.email"
+              *ngIf="mockRepositoriesInfo.email"
               class="list-group-item profileCard__item"
             >
               Email:
               <span class="profileCard__item--result">{{
-                mockRepostoriesInfo.email
+                mockRepositoriesInfo.email
               }}</span>
             </li>
             <li
-              *ngIf="mockRepostoriesInfo.blog"
+              *ngIf="mockRepositoriesInfo.blog"
               class="list-group-item profileCard__item"
             >
               Blog Link:
               <span class="profileCard__item--result">{{
-                mockRepostoriesInfo.blog
+                mockRepositoriesInfo.blog
               }}</span>
             </li>
             <li
-              *ngIf="mockRepostoriesInfo.created_at"
+              *ngIf="mockRepositoriesInfo.created_at"
               class="list-group-item profileCard__item"
             >
               Member since:
               <span class="profileCard__item--result">{{
-                mockRepostoriesInfo.created_at
+                mockRepositoriesInfo.created_at
               }}</span>
             </li>
           </ul>

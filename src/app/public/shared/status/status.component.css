@@ -1,0 +1,30 @@
+.statusCard {
+  border-radius: 10px;
+  width: 100px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  vertical-align: middle;
+  margin: 10px;
+}
+.statusCard--forks {
+  background-color: rgb(155, 255, 255);
+
+}
+.statusCard--watchers {
+  background-color: rgb(151, 151, 233);
+}
+
+.statusCard__text {
+  padding: 0;
+  margin: 0 ;
+}
+
+
+@media screen and (max-width: 667px) {
+  .statusCard {
+    margin: 0px 0px 3px 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}

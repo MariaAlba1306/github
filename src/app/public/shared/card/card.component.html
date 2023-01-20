@@ -1,1 +1,32 @@
-<p>card works!</p>
+<tr *ngFor="let item of mockRepositoriesRepo">
+  <td class="tableRepository__description">
+    <tr>
+      <a href="{{ item.html_url }}">
+        <p class="tableRepository__name">
+          {{ item.name }}
+        </p>
+      </a>
+    </tr>
+    <tr>
+      <p class="tableRepository__info">{{ item.description }}</p>
+    </tr>
+  </td>
+  <td class="tableRepository__info">
+    <tr>
+      <div class="tableRepository__status">
+        <div class="tableRepository__cell">
+          <app-status
+            [title]="item.forks + ' forks'"
+            version="forks"
+          ></app-status>
+        </div>
+        <div class="tableRepository__cell">
+          <app-status
+            [title]="item.watchers + ' watchers'"
+            version="watchers"
+          ></app-status>
+        </div>
+      </div>
+    </tr>
+  </td>
+</tr>

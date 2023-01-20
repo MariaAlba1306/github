@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ActivatedRoute, Route } from '@angular/router';
+import { GithubService } from 'src/app/api/github.service';
 
 @Component({
   selector: 'app-header',
@@ -9,16 +10,20 @@ import { ActivatedRoute, Route } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  @Input() searchbox: string = '';
-  inputValue: string | undefined;
-  inputValuewithoutCommas: string = '';
-  formGroup: any;
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  @Input() searchbox: string ;
+  inputValue: string ;
+  inputValuewithoutCommas: string ;
+  formGroup: FormGroup;
+
+  constructor(private router: Router, private GithubService: GithubService) {
     this.formGroup = new FormGroup({
       inputvalue: new FormControl(),
     });
   }
 
+  get results(): boolean {
+    return this.GithubService.noResults;
+  }
   keyDownFunction(event: { keyCode: number }): void {
     if (event.keyCode === 13) {
       this.search();
@@ -33,6 +38,9 @@ export class HeaderComponent {
       this.router.navigate(['results'], {
         queryParams: { search: this.inputValue },
       });
+      setTimeout(() => {
+        document.location.reload();
+      }, 10);
     } else {
       document.getElementById('search')!.style.border = '2px solid red';
     }

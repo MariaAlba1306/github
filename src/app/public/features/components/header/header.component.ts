@@ -10,11 +10,11 @@ import { GithubService } from 'src/app/api/github.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  @Input() searchbox: string = '';
-  inputValue: string = '';
-  inputValuewithoutCommas: string = '';
+  @Input() searchbox: string ;
+  inputValue: string ;
+  inputValuewithoutCommas: string ;
   formGroup: FormGroup;
-  
+
   constructor(private router: Router, private GithubService: GithubService) {
     this.formGroup = new FormGroup({
       inputvalue: new FormControl(),

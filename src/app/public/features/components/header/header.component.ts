@@ -14,24 +14,22 @@ export class HeaderComponent {
   inputValue: string = '';
   inputValuewithoutCommas: string = '';
   formGroup: FormGroup;
-  constructor(
-    private router: Router,
-    private GithubService: GithubService
-  ) {
+  
+  constructor(private router: Router, private GithubService: GithubService) {
     this.formGroup = new FormGroup({
       inputvalue: new FormControl(),
     });
   }
 
+  get results(): boolean {
+    return this.GithubService.noResults;
+  }
   keyDownFunction(event: { keyCode: number }): void {
     if (event.keyCode === 13) {
       this.search();
     } else {
       document.getElementById('search')!.style.border = '0px solid red';
     }
-  }
-  get results(): boolean {
-    return this.GithubService.noResults;
   }
   search(): void {
     this.inputValue = this.formGroup.value.inputvalue;

@@ -6,12 +6,9 @@ import { GithubService } from 'src/app/api/github.service';
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css'],
 })
-export class ResultsComponent implements OnInit {
-  constructor(private GithubService: GithubService) {}
+export class ResultsComponent {
   get noResults(): boolean {
     return this.GithubService.noResults;
   }
-  ngOnInit(): void {
-    console.log(this.noResults)
-  }
+  constructor(private GithubService: GithubService) {}
 }

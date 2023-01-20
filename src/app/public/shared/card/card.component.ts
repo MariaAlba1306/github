@@ -9,6 +9,8 @@ import { SearchRepo } from 'src/app/api/github.interface';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
+  querySearch: string;
+  mockRepositoriesRepo: SearchRepo[] ;
   constructor(
     private GithubService: GithubService,
     private activatedRoute: ActivatedRoute
@@ -17,16 +19,6 @@ export class CardComponent implements OnInit {
       this.querySearch = data['search'];
     });
   }
-  querySearch: string = '';
-  mockRepositoriesRepo: SearchRepo[] = [
-    {
-      name: '',
-      description: '',
-      forks: 0,
-      watchers: 0,
-      html_url: '',
-    },
-  ];
 
   ngOnInit(): void {
     this.GithubService.searchRepo(this.querySearch).then((data) => {

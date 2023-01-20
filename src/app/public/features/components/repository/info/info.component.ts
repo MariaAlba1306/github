@@ -9,6 +9,8 @@ import { SearchProfile } from 'src/app/api/github.interface';
   styleUrls: ['./info.component.css'],
 })
 export class InfoComponent {
+  querySearch: string ;
+  mockRepositoriesInfo: SearchProfile ;
   constructor(
     private GithubService: GithubService,
     private activatedRoute: ActivatedRoute
@@ -17,19 +19,6 @@ export class InfoComponent {
       this.querySearch = data['search'];
     });
   }
-  querySearch: string = '';
-  mockRepositoriesInfo: SearchProfile = {
-    login: '',
-    location: '',
-    email: '',
-    avatar_url: '',
-    blog: '',
-    created_at: '',
-    followers: 0,
-    following: 0,
-    public_gists: 0,
-    public_repos: 0,
-  };
   ngOnInit(): void {
     this.GithubService.searchProfile(this.querySearch).then((data) => {
       this.mockRepositoriesInfo = data;

@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class StatusComponent {
   @Input() title: string | undefined;
   @Input() version: 'forks' | 'watchers' | undefined;
+  constructor(){}
 }

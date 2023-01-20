@@ -11,10 +11,14 @@ import {
 @Injectable({
   providedIn: 'root',
 })
-export class GithubService  {
+export class GithubService {
+  noResults: boolean;
+  inputValue: string;
+  constructor() {}
+
   public async searchProfile(inputValue: string): Promise<SearchProfile> {
     const response = await this.getUserInfoHttp(inputValue);
-        console.log(this.mapper(response));
+    console.log(this.mapper(response));
 
     return this.mapper(response);
   }
@@ -37,17 +41,16 @@ export class GithubService  {
     }
     return json;
   }
-  noResults = false;
-  inputValue = '';
+
   private async getUserRepo(inputValue: string): Promise<SearchRepoDTO[]> {
     const userUrl = `https://api.github.com/users/${inputValue}/repos`;
     const response = await fetch(userUrl);
     const data = await Promise.all([fetch(userUrl)]);
     const repoArray: SearchRepoDTO[] = await response.json();
     if (data[0].status === 404 || data[0].status === 403) {
-    this.noResults = true;
-    }else{
-    this.noResults = false;
+      this.noResults = true;
+    } else {
+      this.noResults = false;
     }
     return repoArray;
   }
@@ -76,5 +79,4 @@ export class GithubService  {
       html_url: userRepo.html_url,
     };
   }
-  
 }

@@ -7,13 +7,13 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./input.component.css'],
 })
 export class InputComponent {
+  formGroup: FormGroup;
+  @Input() inputId = '';
+  @Input() control = new FormControl();
+  @Input() label = '';
   constructor() {
     this.formGroup = new FormGroup({
       inputvalue: new FormControl(),
     });
   }
-  formGroup: FormGroup;
-  @Input() inputId = '';
-  @Input() control = new FormControl();
-  @Input() label = '';
 }

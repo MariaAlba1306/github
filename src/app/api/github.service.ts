@@ -31,13 +31,13 @@ export class GithubService  {
     const json: SearchProfileDTO = await response.json();
     const data = await Promise.all([fetch(userUrl)]);
     if (data[0].status === 404 || data[0].status === 403) {
-    this.noResults = true;
-    }else{
-    this.noResults = false;
+      this.noResults = true;
+    } else {
+      this.noResults = false;
     }
     return json;
   }
-  noResults = true;
+  noResults = false;
   inputValue = '';
   private async getUserRepo(inputValue: string): Promise<SearchRepoDTO[]> {
     const userUrl = `https://api.github.com/users/${inputValue}/repos`;

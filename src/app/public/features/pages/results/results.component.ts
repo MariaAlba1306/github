@@ -11,5 +11,7 @@ export class ResultsComponent implements OnInit {
   get noResults(): boolean {
     return this.GithubService.noResults;
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.noResults)
+  }
 }
